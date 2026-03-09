@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Новый заказ</title>
+    <style>
+        body { font-family: Arial; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .form-group { margin: 15px 0; }
+        input, textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        .back { margin-top: 20px; display: block; color: #666; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <a href="/" class="back">← Назад</a>
+
+    <div class="card">
+        <h1>Создать заказ</h1>
+
+        <form method="post" action="/orders">
+            <div class="form-group">
+                <label>Клиент:</label>
+                <input type="text" name="customerName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Описание заказа:</label>
+                <textarea name="description" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Создать заказ</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
